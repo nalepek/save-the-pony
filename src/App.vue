@@ -1,16 +1,21 @@
 <template>
-  
+  <HeroImage />
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import HeroImage from '@/components/HeroImage.vue';
 
 @Component({
   components: {
+    HeroImage
   },
 })
 
-export default class App extends Vue {}
+export default class App extends Vue {
+  
+}
 </script>
 
 <style lang="scss">
