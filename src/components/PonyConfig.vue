@@ -1,5 +1,5 @@
 <template>
-  <form id="pony-config-form" @submit.prevent="createMaze">
+  <form id="pony-config-form" @submit.prevent="submitClick">
     <input
       id="config-pony-name"
       name="config-pony-name"
@@ -13,7 +13,7 @@
       id="config-maze-width"
       name="config-maze-width"
       placeholder="enter maze width"
-      type="number"
+      type="text"
       :value="mazeConfig.mazeWidth"
       @input="change($event, 'mazeWidth')"
     />
@@ -22,7 +22,7 @@
       id="config-maze-height"
       name="config-maze-height"
       placeholder="enter maze height"
-      type="number"
+      type="text"
       :value="mazeConfig.mazeHeight"
       @input="change($event, 'mazeHeight')"
     />
@@ -31,7 +31,7 @@
       id="config-difficulty"
       name="config-difficulty"
       placeholder="enter difficulty"
-      type="number"
+      type="text"
       :value="mazeConfig.difficulty"
       @input="change($event, 'difficulty')"
     />
@@ -75,9 +75,11 @@ export default class PonyConfig extends Vue {
     return this.mazeConfig;
   }
 
-  private createMaze() {
-    console.log('create maze');
+  @Emit('submit')
+  private submitClick(event: any) {
+    return this.mazeConfig;
   }
+
   // @Emit('chan')
   // private change(conf: any) {
   //   console.log('difficulty: ' + this.$refs.difficulty.value);

@@ -1,13 +1,21 @@
 export class MazeConfig {
-    public ponyName: string | null;
-    public mazeHeight: number | null;
-    public mazeWidth: number | null;
-    public difficulty: number | null;
+    public ponyName: string;
+    public mazeHeight: string;
+    public mazeWidth: string;
+    public difficulty: string;
 
     constructor() {
-        this.ponyName = null;
-        this.mazeHeight = null;
-        this.mazeWidth = null;
-        this.difficulty = null;
+        this.ponyName = '';
+        this.mazeHeight = '';
+        this.mazeWidth = '';
+        this.difficulty = '';
     }
 }
+
+
+// MazeParams {
+//     maze-width (integer): min 15 max 25 ,
+//     maze-height (integer): min 15 max 25 ,
+//     maze-player-name (string): should be valid pony name! ,
+//     difficulty (integer, optional): from 0 (easiest) to 10 (hardest)
+//     }
