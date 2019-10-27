@@ -2,8 +2,8 @@
   <div class="wrapper">
     <HeroImage />
     <PonyConfig 
-    @input="handleConfig"
     :config="mazeConfig" 
+    @changePonyConfig="handleChangePonyConfig"
     />
   </div>
 </template>
@@ -30,14 +30,9 @@ export default class App extends Vue {
     this.mazeConfig = new MazeConfig();
   }
 
-  private handleConfig(event: any) {
-    console.log('handleConfig!');
-    console.log(event);
-    console.log(this.mazeConfig);
-    // this.loading = true;
-    // this.debouncedInput(this.searchValue);
+  private handleChangePonyConfig(conf: MazeConfig) {
+    this.mazeConfig = conf;
   }
-
 }
 </script>
 

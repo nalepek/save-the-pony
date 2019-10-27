@@ -1,15 +1,13 @@
 export class MazeConfig {
-    public ponyName: string;
-    public mazeHeight: number;
-    public mazeWidth: number;
-    public difficulty: number;
+    public ponyName: string | null;
+    public mazeHeight: number | null;
+    public mazeWidth: number | null;
+    public difficulty: number | null;
 
-    constructor();
-
-    constructor(params: MazeConfig = {} as MazeConfig) {
-        this.ponyName = params.ponyName;
-        this.mazeHeight = params.mazeHeight;
-        this.mazeWidth = params.mazeWidth;
-        this.difficulty = params.difficulty;
+    constructor() {
+        this.ponyName = null;
+        this.mazeHeight = null;
+        this.mazeWidth = null;
+        this.difficulty = null;
     }
 }
